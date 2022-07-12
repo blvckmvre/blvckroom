@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, '../build')));
 app.use("/api", api);
 
 app.get('/*', (q, a) => {
-    a.sendFile(path.join(__dirname, 'build', 'index.html'));
+    a.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
 
 const server = http.createServer(app);
